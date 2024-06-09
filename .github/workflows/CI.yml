@@ -30,8 +30,8 @@ jobs:
         shell: pwsh
         run: |
           $vs_installer = 'C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe'
-          &$vs_installer modify --installPath "C:\Program Files\Microsoft Visual Studio 2022" --add Microsoft.VisualStudio.Component.VC.14.39.Tools.x86.x64 | Out-Host
+          &$vs_installer modify --quiet --installPath "C:\Program Files\Microsoft Visual Studio 2022" --add Microsoft.VisualStudio.Component.VC.14.39.Tools.x86.x64 | Out-Host
       - uses: ilammy/msvc-dev-cmd@v1
         with:
-          toolset: '14.40'
+          toolset: '14.39'
           arch: 'x86_64'
