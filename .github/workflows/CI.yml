@@ -34,7 +34,7 @@ jobs:
           $vs_installs
           $vs_installer = 'C:\Program Files (x86)\Microsoft Visual Studio\Installer\setup.exe'
           $vs_path = $vs_installs[0].installationPath
-          &$vs_installer modify --quiet --installPath $vs_path --add Microsoft.VisualStudio.Component.VC.14.39.Tools.x86.x64 | Out-Host
+          &$vs_installer modify --quiet --installPath $vs_path --add 'Microsoft.VisualStudio.Component.VC.14.39.17.9.x86.x64' | Out-Host
       - uses: ilammy/msvc-dev-cmd@v1
         with:
           toolset: '14.39'
